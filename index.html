@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment5</title>
+    <!-- daisyUi and tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- customize config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'btn-colors1':'#ABEF5F',
+                'btn-colors':'#B4F461',
+                'font-color':'rgba(17, 17, 17, 0.7)',
+                'bg-color-2':'#FFFFFF',
+                'nav-color':'#F9F7F3',
+                'btn-color-2':'rgba(17, 17, 17, 0.05);'
+                 },
+                 fontFamily:{
+                  lexend:[ "Lexend", 'sans-serif'],
+              },
+              
+            },
+          },
+        }
+      </script>
 </head>
-<body>
-    
+<body class="font-lexend ">
+    <header class="">
+        <!-- navabar -->
+        <nav class="bg-nav-color pt-4 pb-6 ">
+            <div class="md:max-w-[80%] mx-auto">
+                <div class="bg-red flex justify-between">
+                    <!-- blog button -->
+                    <button class="btn btn-lg bg-btn-colors1">Blog</button>
+                    <button class="btn btn-lg bg-btn-colors1 hidden">Button</button>
+                    <div class="flex items-center gap-4">
+                        <img src="./assets/logo.png" alt="">
+                        <h1 class="text-xl">Donate Bangladesh</h1>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/coin.png" alt="">
+                        <h1><span>5500</span> BDT</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- history and donate button -->
+        <div class="mt-5 flex justify-center gap-4 ">
+            <button class="btn btn-lg text-xl bg-btn-colors1 ">Donate</button>
+            <button class="btn btn-lg text-xl">History</button>
+        </div>
+    </header>
+    <!-- main -->
+     <main></main>
 </body>
 </html>
