@@ -43,11 +43,11 @@
             <div class="md:max-w-[80%] mx-auto">
                 <div class="bg-red flex justify-between">
                     <!-- blog button -->
-                    <button class="btn btn-lg bg-btn-colors1">Blog</button>
-                    <button class="btn btn-lg bg-btn-colors1 hidden">Button</button>
+                    <button id="blog-btn" class="font-semibold rounded-lg btn-lg bg-btn-colors1 hdden">Blog</button>
+                    <button id="home-btn" class="font-semibold rounded-lg btn-lg bg-btn-colors1 hidden">Home</button>
                     <div class="flex items-center gap-4">
                         <img src="./assets/logo.png" alt="">
-                        <h1 class="text-xl text-color">Donate Bangladesh</h1>
+                        <h1 class="text-xl font-extrabold text-color">Donate Bangladesh</h1>
                     </div>
                     <div class="flex items-center gap-3">
                         <img src="./assets/coin.png" alt="">
@@ -57,9 +57,9 @@
             </div>
         </nav>
         <!-- history and donate button -->
-        <div class="mt-5 flex justify-center gap-4 ">
-            <button id="donate-btn" class="rounded-lg btn-lg text-xl bg-btn-colors1 ">Donate</button>
-            <button id="history-btn" class="rounded-lg btn-lg text-xl text-color2">History</button>
+        <div class="mt-5 flex justify-center gap-4 text-color">
+            <button id="donate-btn" class="font-semibold  rounded-lg btn-lg text-xl bg-btn-colors1 text-color">Donate</button>
+            <button id="history-btn" class="text-color font-semibold rounded-lg btn-lg text-xl">History</button>
         </div>
        
   
@@ -119,6 +119,7 @@
             <!-- Image Section -->
             <img src="./assets/quota-protest.png" alt="Flood Relief" class="w-full lg:w-[45%] object-cover" />
             <div class="px-12">
+                <!-- card amount -->
                 <button class="btn">
                     <img src="./assets/coin.png" alt="">
                     <p><span id="donate-quota">0</span>BDT</p>
@@ -151,19 +152,24 @@
         </section>
         <!-- modal -->
          <!-- Open the modal using ID.showModal() method -->
+         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+           <div class="modal-box">
+             <h3 class="text-5xl font-bold text-center">Congrats!</h3>
+             <div  class="flex items-center justify-center mt-4">
+                <img src="./assets/coin.png"  alt="">
+             </div>
+             <p class=" flex items-center justify-center">You Have Donated for Humankind</p>
+             <div class="modal-action flex items-center justify-center ">
+                <h3 class="mb-5 font-bold text-3xl">Successfully</h3>
+             </div>
+               <form method="dialog" class="flex items-center justify-center">
+                 <!-- if there is a button in form, it will close the modal -->
+                 <button class="btn ">Close Confirmation</button>
+               </form>
+             </div>
+           </div>
+         </dialog>
     
-    <dialog id="my_modal_1" class="modal">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
-        <div class="modal-action">
-        <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
-        </form>
-        </div>
-    </div>
-    </dialog>
      </main>
      <script src="./js/index.js"></script>
 </body>
