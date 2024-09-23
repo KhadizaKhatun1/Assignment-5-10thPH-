@@ -30,7 +30,8 @@ donateNowBtn.addEventListener('click',function(){
         document.getElementById('donate-noakhali').innerText=donateAmount1;
         // formatCurrency('donate-amount')
         addToHistory1(donateAmount1);
-        // hidden('donate-now-btn');
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
 
     }
 })
@@ -50,6 +51,9 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
         document.getElementById('total-amount').innerText=remainingAmount;
         document.getElementById('donate-feni').innerText=donateAmount2;
         addToHistory2(donateAmount2);
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
+
         // hidden('donate-now-btn2');
 
 
@@ -73,8 +77,9 @@ const donateNowBtn3=document.getElementById('donate-now-btn3');
         const remainingAmount=mainAmount-donateAmount3;
         document.getElementById('total-amount').innerText=remainingAmount;
         document.getElementById('donate-quota').innerText=donateAmount3;
-        
         addToHistory3(sum);
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
         // hidden('donate-now-btn3');
     }
 })
@@ -83,11 +88,10 @@ const donateNowBtn3=document.getElementById('donate-now-btn3');
 const historyButton=document.getElementById('history-btn');
 const donateButton=document.getElementById('donate-btn');
 historyButton.addEventListener('click',function(){
-    historyButton.classList.add(
-        'bg-btn-colors1',
-        
-    )
-    donateButton.classList.remove('bg-btn-colors1','color2')
+    historyButton.classList.add('bg-btn-colors1','text-color')
+    donateButton.classList.remove('bg-btn-colors1','text-color')
+    // donateButton.classList.add('text-font-color')
+    // historyButton.classList.add('bg-btn-colors1,text-color')
     document.getElementById('section-container').classList.add('hidden');
     document.getElementById('section-container2').classList.add('hidden');
     document.getElementById('section-container3').classList.add('hidden');
@@ -95,11 +99,9 @@ historyButton.addEventListener('click',function(){
 })
 donateButton.addEventListener('click',function(){
     donateButton.classList.add(
-        'bg-btn-colors1',
-        'text-color2'
-    )
-    donateButton.classList.add('bg-btn-colors1')
-    historyButton.classList.remove('bg-btn-colors1')
+        'bg-btn-colors1',)
+    donateButton.classList.add('bg-btn-colors1','text-color')
+    historyButton.classList.remove('bg-btn-colors1','text-color')
     document.getElementById('section-container').classList.remove('hidden');
     document.getElementById('section-container2').classList.remove('hidden');
     document.getElementById('section-container3').classList.remove('hidden');
@@ -146,7 +148,6 @@ historyItem.innerHTML = `
     </div>
 </div>
 `;
-
 // Get the id from html to add the above elements
 const historyContainer = document.getElementById('history-list');
 console.log(historyContainer);

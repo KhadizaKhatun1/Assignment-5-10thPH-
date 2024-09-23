@@ -37,7 +37,7 @@
       </script>
 </head>
 <body class="font-lexend ">
-    <header class="">
+    <header class="bg-white/20 backdrop-blur-lg sticky top-0">
         <!-- navabar -->
         <nav class="bg-nav-color pt-4 pb-6 ">
             <div class="md:max-w-[80%] mx-auto">
@@ -58,8 +58,8 @@
         </nav>
         <!-- history and donate button -->
         <div class="mt-5 flex justify-center gap-4 ">
-            <button id="donate-btn" class="btn btn-lg text-xl bg-btn-colors1 ">Donate</button>
-            <button id="history-btn" class="btn btn-lg text-xl text-color2">History</button>
+            <button id="donate-btn" class="rounded-lg btn-lg text-xl bg-btn-colors1 ">Donate</button>
+            <button id="history-btn" class="rounded-lg btn-lg text-xl text-color2">History</button>
         </div>
        
   
@@ -139,16 +139,31 @@
        </div>
      </div>
         </section>
-        <section id="history-container" class="md:max-w-[80%] mx-auto mt-24 ">
+        <section id="history-container " class="md:max-w-[80%] mx-auto mt-24 ">
             <!-- history section -->
            <div
            id="history-section"
-           class="  bg-color-2 p-4 rounded-lg shadow-xl mb-5">
+           class=" hidden  bg-color-2 p-4 rounded-lg shadow-xl mb-5">
            <div id="history-list">
 
            </div>
          </div>
         </section>
+        <!-- modal -->
+         <!-- Open the modal using ID.showModal() method -->
+    
+    <dialog id="my_modal_1" class="modal">
+    <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+        <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
      </main>
      <script src="./js/index.js"></script>
 </body>
