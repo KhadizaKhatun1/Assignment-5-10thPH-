@@ -12,7 +12,7 @@ function getInnerText(id){
 // blog button
 const blogBtn=document.getElementById('blog-btn');
 blogBtn.addEventListener('click',function(){
-    window.location.href='./home.html'
+    window.location.href='./blog.html'
 })
 // home button
 const homeBtn=document.getElementById('home-btn');
