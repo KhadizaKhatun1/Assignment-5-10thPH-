@@ -28,7 +28,7 @@ donateNowBtn.addEventListener('click',function(){
     const donateAmount1=getInputFiledValue('donate-amount');
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
     if(donateAmount1<=0 || isNaN(donateAmount1) || mainAmount<donateAmount1){
-        alert('Please enter the validate amount')
+        alert('Please enter the valid amount')
         
     }
     else{
@@ -52,7 +52,7 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
     const donateAmount2=getInputFiledValue('donate-amount2');
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
     if(donateAmount2<=0 || isNaN(donateAmount2)|| mainAmount<donateAmount2){
-        alert('Please enter the validate amount')
+        alert('Please enter the valid amount')
     }
     else{
         // donateNoakhali
@@ -79,7 +79,7 @@ const donateNowBtn3=document.getElementById('donate-now-btn3');
     
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
     if(donateAmount3<=0 || isNaN(donateAmount3) || mainAmount<donateAmount3){
-        alert('Please enter the validate amount')
+        alert('Please enter the valid amount')
     }
     else{
         // donateNoakhali
