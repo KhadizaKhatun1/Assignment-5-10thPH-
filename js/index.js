@@ -102,6 +102,7 @@ historyButton.addEventListener('click',function(){
     donateButton.classList.remove('bg-btn-colors1')
     // donateButton.classList.add('text-font-color')
     // historyButton.classList.add('bg-btn-colors1,text-color')
+    document.getElementById('footer-section').classList.add('hidden')
     document.getElementById('section-container').classList.add('hidden');
     document.getElementById('section-container2').classList.add('hidden');
     document.getElementById('section-container3').classList.add('hidden');
@@ -143,7 +144,6 @@ function addToHistory2(id) {
     const quota1=document.getElementById('feni-flood').innerText;
 const historyItem = document.createElement('div');
 historyItem.className = 'bg-white p-3 rounded-md  mb-4';
-
 historyItem.innerHTML = `
 <div class="flex items-center space-x-4 mt-4 border border-gray-200 p-10 rounded-lg">
     <div>
