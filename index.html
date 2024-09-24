@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f0c2108da8.js" crossorigin="anonymous"></script>
     <!-- customize config -->
     <script>
         tailwind.config = {
@@ -43,18 +45,21 @@
             <div class="md:max-w-[80%] mx-auto">
                 <div class="bg-red flex justify-between">
                     <!-- blog button -->
-                    <button id="blog-btn" class="font-semibold rounded-lg btn-lg bg-btn-colors1 hdden">Blog</button>
+                    
+                    <button id="blog-btn" class="font-semibold rounded-lg btn-lg bg-btn-colors1 ">Blog</button>
                     <button id="home-btn" class="font-semibold rounded-lg btn-lg bg-btn-colors1 hidden">Home</button>
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/logo.png" alt="">
-                        <h1 class="text-2xl font-extrabold text-color">Donate Bangladesh</h1>
+                    <div class="flex items-center gap-4 ">
+                        <img class="hidden md:block" src="./assets/logo.png" alt="">
+                        <h1 class="text-2xl font-extrabold text-color hidden md:block">Donate Bangladesh</h1>
                     </div>
                     <div class="flex items-center gap-3">
-                        <img src="./assets/coin.png" alt="">
-                        <h1 class="font-bold text-xl "><span id="total-amount">5500</span>BDT</h1>
+                        <img class="hidden md:block" src="./assets/coin.png" alt="">
+                        <h1 class="font-bold text-xl hidden md:block"><span id="total-amount">5500</span>BDT</h1>
                     </div>
+                    <i class="fa-solid fa-bars block md:hidden"></i>
                 </div>
             </div>
+            
         </nav>
         <!-- history and donate button -->
         <div class="mt-5 flex justify-center gap-4 text-color">
@@ -63,6 +68,7 @@
         </div>
   
     </header>
+    
     <!-- main -->
      <main class="">
         <section id="section-container" class="md:max-w-[80%] mx-auto mt-24 ">
