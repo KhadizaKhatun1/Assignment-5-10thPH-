@@ -27,8 +27,8 @@ donateNowBtn.addEventListener('click',function(){
     console.log(mainAmount)
     const donateAmount1=getInputFiledValue('donate-amount');
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
-    if(donateAmount1<=0 || isNaN(donateAmount1)){
-        alert('Please Enter The Correct Amount')
+    if(donateAmount1<=0 || isNaN(donateAmount1) || mainAmount<donateAmount1){
+        alert('Please enter the validate amount')
         
     }
     else{
@@ -51,8 +51,8 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
     // console.log(mainAmount)
     const donateAmount2=getInputFiledValue('donate-amount2');
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
-    if(donateAmount2<=0 || isNaN(donateAmount2)){
-        alert('Please Enter The Correct Amount')
+    if(donateAmount2<=0 || isNaN(donateAmount2)|| mainAmount<donateAmount2){
+        alert('Please enter the validate amount')
     }
     else{
         // donateNoakhali
@@ -78,8 +78,8 @@ const donateNowBtn3=document.getElementById('donate-now-btn3');
     const donateAmount3=getInputFiledValue('donate-amount3');
     
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
-    if(donateAmount3<=0 || isNaN(donateAmount3)){
-        alert('Please Enter The Correct Amount')
+    if(donateAmount3<=0 || isNaN(donateAmount3) || mainAmount<donateAmount3){
+        alert('Please enter the validate amount')
     }
     else{
         // donateNoakhali
@@ -178,7 +178,8 @@ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
     // Get the id from html to add the above elements
     const historyContainer = document.getElementById('history-list');
-    historyContainer.appendChild(historyItem);
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    // historyContainer.appendChild(historyItem);
 }
 // remove hidden and add hidden
 
