@@ -72,15 +72,15 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
 // // donate now btn3
 let sum3=0;
 const donateNowBtn3=document.getElementById('donate-now-btn3');
-    donateNowBtn3.addEventListener('click',function(){
-    const mainAmount=getInnerText('total-amount');
-    const donateAmount3=getInputFiledValue('donate-amount3');
+donateNowBtn3.addEventListener('click',function(){
+const mainAmount=getInnerText('total-amount');
+const donateAmount3=getInputFiledValue('donate-amount3');
     
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
-    if(donateAmount3<=0 || isNaN(donateAmount3) || mainAmount<donateAmount3){
+if(donateAmount3<=0 || isNaN(donateAmount3) || mainAmount<donateAmount3){
         alert('Please enter the valid amount')
-    }
-    else{
+}
+else{
         // donateNoakhali
         const remainingAmount=mainAmount-donateAmount3;
         document.getElementById('total-amount').innerText=remainingAmount;
