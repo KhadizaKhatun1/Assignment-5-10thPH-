@@ -1,11 +1,11 @@
 // common input function1
 function getInputFiledValue(id){
-    const inputAmount=parseFloat(document.getElementById(id).value);
+    const inputAmount=Number(document.getElementById(id).value);
     return inputAmount;
 }
 // function 2
 function getInnerText(id){
-    const innText=parseFloat(document.getElementById(id).innerText);
+    const innText=Number(document.getElementById(id).innerText);
     return innText;
 }
 
@@ -20,7 +20,7 @@ homeBtn.addEventListener('click',function(){
     window.location.href = './index.html';
 })
 // donate now button
-let sum=0;
+let sum1=0;
 const donateNowBtn=document.getElementById('donate-now-btn');
 donateNowBtn.addEventListener('click',function(){
     const mainAmount=getInnerText('total-amount');
@@ -35,15 +35,16 @@ donateNowBtn.addEventListener('click',function(){
         // donateNoakhali
         const remainingAmount=mainAmount-donateAmount1;
         document.getElementById('total-amount').innerText=remainingAmount;
-        sum=sum+donateAmount1
-        document.getElementById('donate-noakhali').innerText=sum;
-        addToHistory2(donateAmount1);
+        sum1=sum1+donateAmount1
+        document.getElementById('donate-noakhali').innerText=sum1;
+        addToHistory1(donateAmount1);
         const modal = document.getElementById('my_modal_5');
         modal.showModal();
 
     }
 })
 // donate now btn2
+let sum2=0;
 const donateNowBtn2=document.getElementById('donate-now-btn2');
     donateNowBtn2.addEventListener('click',function(){
     const mainAmount=getInnerText('total-amount')
@@ -57,8 +58,8 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
         // donateNoakhali
         const remainingAmount=mainAmount-donateAmount2;
         document.getElementById('total-amount').innerText=remainingAmount;
-        sum=sum+donateAmount2
-        document.getElementById('donate-feni').innerText=sum;
+        sum2=sum2+donateAmount2
+        document.getElementById('donate-feni').innerText=sum2;
         addToHistory2(donateAmount2);
         const modal = document.getElementById('my_modal_5');
         modal.showModal();
@@ -70,7 +71,7 @@ const donateNowBtn2=document.getElementById('donate-now-btn2');
     }
 })
 // // donate now btn3
-
+let sum3=0;
 const donateNowBtn3=document.getElementById('donate-now-btn3');
     donateNowBtn3.addEventListener('click',function(){
     const mainAmount=getInnerText('total-amount');
@@ -84,9 +85,9 @@ const donateNowBtn3=document.getElementById('donate-now-btn3');
         // donateNoakhali
         const remainingAmount=mainAmount-donateAmount3;
         document.getElementById('total-amount').innerText=remainingAmount;
-        sum=sum+donateAmount3
-        document.getElementById('donate-quota').innerText=sum;
-        addToHistory2(donateAmount3);
+        sum3=sum3+donateAmount3
+        document.getElementById('donate-quota').innerText=sum3;
+        addToHistory3(donateAmount3);
         const modal = document.getElementById('my_modal_5');
         modal.showModal();
         // hidden('donate-now-btn3');
@@ -126,8 +127,10 @@ historyItem.className = 'bg-white p-3 rounded-md  mb-4';
 historyItem.innerHTML = `
 <div class="flex items-center space-x-4 mt-4 border border-gray-200 p-10 rounded-lg">
     <div>
-        <p class='text-xl font-semibold text-gray-900'>${id} Taka ${flood1}</p>
-        <p class='text-sm text-gray-500'>Date: ${new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', timeZoneName: 'short' })}</p>
+        <p class='text-xl font-semibold text-gray-900'>${id} Taka is Donated for ${flood1}</p>
+        <p class='text-sm text-gray-500'>
+                Date: ${new Date().toString()}
+        </p>
     </div>
 </div>
 `;
@@ -145,8 +148,10 @@ historyItem.className = 'bg-white p-3 rounded-md  mb-4';
 historyItem.innerHTML = `
 <div class="flex items-center space-x-4 mt-4 border border-gray-200 p-10 rounded-lg">
     <div>
-        <p class='text-xl font-semibold text-gray-900'>${id} Taka ${quota1}</p>
-        <p class='text-sm text-gray-500'>Date: ${new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', timeZoneName: 'short' })}</p>
+        <p class='text-xl font-semibold text-gray-900'>${id} Taka is Donated for ${quota1}</p>
+        <p class='text-sm text-gray-500'>
+                Date: ${new Date().toString()}
+        </p>
     </div>
 </div>
 `;
@@ -163,7 +168,7 @@ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     historyItem.innerHTML = `
     <div class="flex items-center space-x-4 mt-4 border border-gray-200 p-10 rounded-lg">
         <div>
-            <p class='text-xl font-semibold text-gray-900 '>${id} Taka ${quota1}</p>
+            <p class='text-xl font-semibold text-gray-900 '>${id} Taka is Donated for ${quota1}</p>
             <p class='text-sm text-gray-500'>
                 Date: ${new Date().toString()}
               </p>
