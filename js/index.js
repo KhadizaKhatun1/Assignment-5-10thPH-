@@ -24,7 +24,6 @@ let sum1=0;
 const donateNowBtn=document.getElementById('donate-now-btn');
 donateNowBtn.addEventListener('click',function(){
     const mainAmount=getInnerText('total-amount');
-    console.log(mainAmount)
     const donateAmount1=getInputFiledValue('donate-amount');
     // const donateNoakhali=getInputFiledValue('donate-noakhali');
     if(donateAmount1<=0 || isNaN(donateAmount1) || mainAmount<donateAmount1){
