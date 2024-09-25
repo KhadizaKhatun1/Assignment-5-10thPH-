@@ -99,7 +99,9 @@ const historyButton=document.getElementById('history-btn');
 const donateButton=document.getElementById('donate-btn');
 historyButton.addEventListener('click',function(){
     historyButton.classList.add('bg-btn-colors1')
+    historyButton.classList.remove('bg-gray-200')
     donateButton.classList.remove('bg-btn-colors1')
+    donateButton.classList.add('bg-gray-200')
     // donateButton.classList.add('text-font-color')
     // historyButton.classList.add('bg-btn-colors1,text-color')
     document.getElementById('footer-section').classList.add('hidden')
@@ -110,8 +112,9 @@ historyButton.addEventListener('click',function(){
 })
 donateButton.addEventListener('click',function(){
     donateButton.classList.add(
-        'bg-btn-colors1',)
-    donateButton.classList.add('bg-btn-colors1')
+        'bg-btn-colors1')
+    donateButton.classList.remove('bg-gray-200')
+    historyButton.classList.add('bg-gray-200')
     historyButton.classList.remove('bg-btn-colors1')
     document.getElementById('section-container').classList.remove('hidden');
     document.getElementById('section-container2').classList.remove('hidden');
